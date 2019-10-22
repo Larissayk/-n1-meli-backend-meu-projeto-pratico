@@ -1,0 +1,26 @@
+{
+  "name": "n1-meli-backend-meu-projeto-pratico",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Larissayk/-n1-meli-backend-meu-projeto-pratico.git"
+  },
+  "author": "Larissa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Larissayk/-n1-meli-backend-meu-projeto-pratico/issues"
+  },
+  "homepage": "https://github.com/Larissayk/-n1-meli-backend-meu-projeto-pratico#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}

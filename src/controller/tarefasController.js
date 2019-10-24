@@ -47,11 +47,16 @@ exports.getByColaborador = (req, res) => {
   } 
 };
 
-//Buscar Tarefas por Data de Inclusão
+//Buscar Tarefas por Data de Inclusão e apresentar da mais nova para mais antiga
 exports.getByDataInclusao = (req, res) => {
  const datas = tarefas.map(tarefa => tarefa.dataInclusao);
  console.log(datas)
- const dataCortada = datas.split('/')
-//  const novaData = new Date(dataCortada[0], dataCortada[1], dataCortada[2])
- console.log(dataCortada)
+// const datas2 = datas.map(dateString => dateString.split("/"))
+//  console.log(datas2);
+ const datas3 = datas.map(
+   newDt => new Date(newDt) );
+  
+ console.log(datas3);
+
+
  }

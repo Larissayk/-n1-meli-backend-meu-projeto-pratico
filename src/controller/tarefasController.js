@@ -51,43 +51,32 @@ exports.getByColaborador = (req, res) => {
 
 //Buscar Tarefas por Data de Inclusão e apresentar da mais nova para mais antiga
 exports.getByDataInclusao = (req, res) => {
-  // 01/20/2019
-//   const exData = "01/20/2019"
-//   const exDataFim = "01/25/2019"
+  tarefas.sort(function(a, b) {
+    return new Date(a.dataInclusao) - new Date(b.dataInclusao);
+  });
+  console.log(tarefas);
+  res.status(200).send(tarefas);
 
-//   console.log(new Date(exData))
-//   const dataConv = new Date(exData)
-//   const dataConv2 = new Date(exDataFim)
-//   const data = new Date(exData).toISOString().split('T')[0]
-// //  const datas = [dataConv, dataConv2]
-// //  const sortDatas = datas.sort((a,b) => a-b)
-//  console.log(data)
+}
 
-  // transformar string para data
-  // split - quebrar as datas
-  // data
-  // mes
-  // ano
-
-  const datas = tarefas.map(tarefa => tarefa.dataInclusao);
-  console.log(datas);
-  const datas2 = datas.map(dateString => new Date(dateString));
-  console.log(datas2);
-  datas2.forEach(OrdenarMaisNovo)
-  console.log(datas2)
-  const datasOrdenadas = datas2.map(data => data.toISOString().split('T')[0])
-  console.log(datasOrdenadas)
+//Calcular diferença entre data de início e data de conclusão e adicionar nova chave aos objetos
+exports.getByDiferencaData = (req, res) => {
+const datas = tarefas.map(tarefa => new Date(tarefa.dataInclusao), new Date(tarefa.dataConclusao) )
+console.log(datas)
+}
 
 
-  function OrdenarMaisNovo (a, b) {
-    maisNovo = datas2.sort((a,b)=> a-b)
-  }
 
-  // function calcularDatas(dia,mes,ano) {
-  // const dataConvert = new Date()
-  // const dia = dataConvert.getDate()
-  // const mes = dataConvert.getMonth() +1
-  // const ano = dataConvert.getFullYear()
-  // console.log(dataConvert)
-  // }
-};
+// const timeDiff = Math.abs(dateFirst.getTime() - dateSecond.getTime());
+
+// days difference
+// const diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+// console.log(diffDays);
+
+// array.forEach(element => {
+//   element.nomeChave = 
+// });
+
+
+
+

@@ -2,7 +2,7 @@
     {
     "id": 1,
     "dataInclusao": "06/14/2019",
-    "dataConclusao":"16/10/2019",
+    "dataConclusao":"10/16/2019",
     "concluido": "true",
     "descricao": "Tarefa 1",
     "nomeColaborador":"Maria"
@@ -18,7 +18,7 @@
     {
     "id": 3,
     "dataInclusao": "07/18/2019",
-    "dataConclusao":"25/10/2019",
+    "dataConclusao":"10/25/2019",
     "concluido": "true",
     "descricao": "Tarefa 3",
     "nomeColaborador":"Júlia"
@@ -34,7 +34,7 @@
     {
     "id": 5,
     "dataInclusao": "09/29/2019",
-    "dataConclusao":"30/09/2019",
+    "dataConclusao":"09/30/2019",
     "concluido": "true",
     "descricao": "Tarefa Final",
     "nomeColaborador":"Ingrid"
